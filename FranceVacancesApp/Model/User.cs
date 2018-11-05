@@ -8,6 +8,11 @@ namespace FranceVacancesApp.Model
 {
     class User
     {
-       int i = 10; 
+        private string _navn;
+        private string _adresse;
+        private string _email;
+        private int _telefonNr;
+
+
     }
 }
