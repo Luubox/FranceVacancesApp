@@ -13,5 +13,6 @@ namespace FranceVacancesApp.Model
         private string _email;
         private int _telefonNr;
 
+
     }
 }
