@@ -13,6 +13,12 @@ namespace FranceVacancesApp.Model
         private string _email;
         private int _telefonNr;
 
-
+        public User(string navn, string adresse, string email, int telefonNr)
+        {
+            _navn = navn;
+            _adresse = adresse;
+            _email = email;
+            _telefonNr = telefonNr;
+        }
     }
 }
