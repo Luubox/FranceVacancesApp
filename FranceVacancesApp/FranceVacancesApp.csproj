@@ -66,8 +66,10 @@
     <Compile Include="Model\Bolig.cs" />
     <Compile Include="Model\BoligCatalog.cs" />
     <Compile Include="Model\Booking.cs" />
+    <Compile Include="Model\BookingCatalog.cs" />
     <Compile Include="Model\Lejer.cs" />
     <Compile Include="Model\Region.cs" />
+    <Compile Include="Model\RegionCatalog.cs" />
     <Compile Include="Model\Udlejer.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
