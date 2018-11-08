@@ -8,17 +8,25 @@ namespace FranceVacancesApp.Model
 {
     class User
     {
-        private string _navn;
-        private string _adresse;
-        private string _email;
-        private int _telefonNr;
+        public string Navn { get; set; }
+        public string Adresse { get; set; }
+        public string Email { get; set; }
+        public int TelefonNr { get; set; }
 
+        public User()
+        {
+        }
         public User(string navn, string adresse, string email, int telefonNr)
         {
-            _navn = navn;
-            _adresse = adresse;
-            _email = email;
-            _telefonNr = telefonNr;
+            Navn = navn;
+            Adresse = adresse;
+            Email = email;
+            TelefonNr = telefonNr;
+        }
+
+        public override string ToString()
+        {
+            return string.Format($"Navn: {Navn}, Adresse: {Adresse}, Email: {Email}, Telefon Nr: {TelefonNr}");
         }
     }
 }

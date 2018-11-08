@@ -1,51 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FranceVacancesApp.Model
+﻿namespace FranceVacancesApp.Model
 {
-    
-    class Bolig
+    internal class Bolig
     {
-        private int _antalPersoner;
-        private int _antalSoveværelser;
-        private String _type;
-        private int _antalBadeværelser;
-        private int _kvadratmeter;
-        private String _adresse;
-        private double _rating;
-        private bool _husdyr;
-        private Udlejer _owner;
+        public int AntalPersoner { get; set; }
+        public int AntalSoveværelser { get; set; }
+        public string Type { get; set; }
+        public int AntalBadeværelser { get; set; }
+        public int Kvadratmeter { get; set; }
+        public string Adresse { get; set; }
+        public double Rating { get; set; }
+        public bool Husdyr { get; set; }
+        public Udlejer Owner { get; set; }
 
-        public Bolig(int antalPersoner, int antalSoveværelser, string type, int antalBadeværelser, int kvadratmeter, string adresse, double rating, bool husdyr, Udlejer owner)
+        //TODO: Dictionary for featueres?
+
+        public Bolig()
         {
-            _antalPersoner = antalPersoner;
-            _antalSoveværelser = antalSoveværelser;
-            _type = type;
-            _antalBadeværelser = antalBadeværelser;
-            _kvadratmeter = kvadratmeter;
-            _adresse = adresse;
-            _rating = rating;
-            _husdyr = husdyr;
-            _owner = owner;
         }
 
-        public void checkAvailability()
+        public Bolig(int antalPersoner, int antalSoveværelser, string type,
+            int antalBadeværelser, int kvadratmeter, string adresse,
+            double rating, bool husdyr, Udlejer owner)
         {
-            // Tjek ledighed
+            AntalPersoner = antalPersoner;
+            AntalSoveværelser = antalSoveværelser;
+            Type = type;
+            AntalBadeværelser = antalBadeværelser;
+            Kvadratmeter = kvadratmeter;
+            Adresse = adresse;
+            Rating = rating;
+            Husdyr = husdyr;
+            Owner = owner;
         }
 
-        public void createReservation()
+        public override string ToString()
         {
-            // Opret reservation
-        }
-
-        public void editReservation()
-        {
-            //redigering af reservation: Slette, forlænge/forkorte reservationen
+            return string.Format(
+                $"Antal Personer: {AntalPersoner}, Antal Soveværelser: {AntalSoveværelser}, " +
+                $"Type: {Type}, Antal Badeværelser: {AntalBadeværelser}, Kvadratmeter {Kvadratmeter}, " +
+                $"Adresse: {Adresse}, Rating: {Rating}, Husdyr: {Husdyr}, Owner: {Owner}");
         }
     }
-    
 }

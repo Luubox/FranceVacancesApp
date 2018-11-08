@@ -1,28 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FranceVacancesApp.Model
 {
-    class Booking
+    internal class Booking
     {
-        private int _bookingNr;
-        private Udlejer _udlejer;
-        private Lejer _kunde;
-        private Bolig _bolig;
-        private DateTime _fraDato;
-        private DateTime _tilDato;
+        public int BookingNr { get; set; }
+        public Udlejer Udlejer { get; set; }
+        public Lejer Kunde { get; set; }
+        public Bolig Bolig { get; set; }
+        public DateTime FraDato { get; set; }
+        public DateTime TilDato { get; set; }
 
-        public Booking(int bookingNr, Udlejer udlejer, Lejer kunde, Bolig bolig, DateTime fraDato, DateTime tilDato)
+        public Booking()
         {
-            _bookingNr = bookingNr;
-            _udlejer = udlejer;
-            _kunde = kunde;
-            _bolig = bolig;
-            _fraDato = fraDato;
-            _tilDato = tilDato;
+        }
+
+        public Booking(int bookingNr, Udlejer udlejer, Lejer kunde, Bolig bolig,
+            DateTime fraDato, DateTime tilDato)
+        {
+            BookingNr = bookingNr;
+            Udlejer = udlejer;
+            Kunde = kunde;
+            Bolig = bolig;
+            FraDato = fraDato;
+            TilDato = tilDato;
+        }
+
+        public override string ToString()
+        {
+            return string.Format(
+                $"Booking Nr: {BookingNr}, Udlejer: {Udlejer}, Kunde: {Kunde}, Bolig: {Bolig}, Fra: {FraDato}, Til: {TilDato}");
         }
 
         public void OpretBooking()

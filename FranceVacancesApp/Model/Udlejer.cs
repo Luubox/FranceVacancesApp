@@ -8,5 +8,6 @@ namespace FranceVacancesApp.Model
 {
     class Udlejer : User
     {
+
     }
 }

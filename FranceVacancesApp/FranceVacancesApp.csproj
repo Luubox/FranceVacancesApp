@@ -64,6 +64,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Model\Bolig.cs" />
+    <Compile Include="Model\BoligCatalog.cs" />
     <Compile Include="Model\Booking.cs" />
     <Compile Include="Model\Lejer.cs" />
     <Compile Include="Model\Region.cs" />
