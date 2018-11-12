@@ -4,18 +4,18 @@
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
   xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-  IgnorableNamespaces="uap mp">
+  IgnoraboligInputleNamespaces="uap mp">
 
   <Identity
-    Name="7c7fed25-7dfc-4331-974b-27d7e219fa0e"
-    Publisher="CN=lord_"
+    Name="7c7fed25-7dfc-4331-974boligInput-27d7e219fa0e"
+    PuboligInputlisher="CN=lord_"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="7c7fed25-7dfc-4331-974b-27d7e219fa0e" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="7c7fed25-7dfc-4331-974boligInput-27d7e219fa0e" PhonePuboligInputlisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>FranceVacanceUWP</DisplayName>
-    <PublisherDisplayName>lord_</PublisherDisplayName>
+    <PuboligInputlisherDisplayName>lord_</PuboligInputlisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -29,7 +29,7 @@
 
   <Applications>
     <Application Id="App"
-      Executable="$targetnametoken$.exe"
+      ExecutaboligInputle="$targetnametoken$.exe"
       EntryPoint="FranceVacanceUWP.App">
       <uap:VisualElements
         DisplayName="FranceVacanceUWP"
@@ -43,7 +43,7 @@
     </Application>
   </Applications>
 
-  <Capabilities>
-    <Capability Name="internetClient" />
-  </Capabilities>
+  <CapaboligInputilities>
+    <CapaboligInputility Name="internetClient" />
+  </CapaboligInputilities>
 </Package>

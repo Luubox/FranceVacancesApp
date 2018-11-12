@@ -9,36 +9,59 @@ namespace FranceVacanceUWP.Persistency
 {
     class PersistencyService
     {
-        //TODO: locate/create storage folder
-        
-        public static async void SaveBoligAsJsonAsync(ObservableCollection<Bolig> b)
+        //TODO: locate storage folder
+        //TODO: Await??!
+
+        /// <summary>
+        /// Konverterer listen af boliger til string via JsonConveter.
+        /// Kalder asynkront Seralize på string variablen.
+        /// </summary>
+        /// <param name="boligInput">Collection af Boliger</param>
+        public static async void SaveBoligAsJsonAsync(ObservableCollection<Bolig> boligInput)
         {
-            string boliger = JsonConvert.SerializeObject(b);
-            SeralizeBoligFileAsync(boliger, "Boliger");
+            string boligString = JsonConvert.SerializeObject(boligInput);
+            SeralizeBoligFileAsync(boligString, "Boliger");
         }
 
+        /// <summary>
+        /// Opretter liste af bolig objekter.
+        /// Kalder asynkront Deserialize på lokal fil.
+        /// Fylder listen med bolig objekter og returnerer listen
+        /// </summary>
+        /// <returns>Liste af bolig objekter</returns>
         public static async Task<List<Bolig>> LoadBoligFromJsonAsync()
         {
-            List<Bolig> boliger = new List<Bolig>();
+            List<Bolig> boligList = new List<Bolig>();
 
             string result = await DeSerializeBoligFileAsync("Boliger");
 
             if (!String.IsNullOrWhiteSpace(result))
             {
-                boliger = JsonConvert.DeserializeObject<List<Bolig>>(result);
+                boligList = JsonConvert.DeserializeObject<List<Bolig>>(result);
             }
-            return boliger;
+            return boligList;
         }
 
+        /// <summary>
+        /// Skriver string variablen til fil, opretter ny fil med fileName hvis den ikke eksisterer
+        /// </summary>
+        /// <param name="boligString">Liste af Boliger konverteret til string</param>
+        /// <param name="fileName">Navnet på den lokale fil</param>
         public static async void SeralizeBoligFileAsync(string boligString, string fileName)
         {
-            Windows.Storage.StorageFolder myStorageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+            Windows.Storage.StorageFolder localFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
 
-            Windows.Storage.StorageFile sampleFile = await myStorageFolder.CreateFileAsync(fileName, Windows.Storage.CreationCollisionOption.ReplaceExisting);
+            Windows.Storage.StorageFile sampleFile = await localFolder.CreateFileAsync(
+                fileName, Windows.Storage.CreationCollisionOption.ReplaceExisting);
 
             await Windows.Storage.FileIO.WriteTextAsync(sampleFile, boligString);
         }
 
+        /// <summary>
+        /// Læser værdier fra fil, returnerer værdier som string.
+        /// </summary>
+        /// <param name="fileName">Navnet på den lokale fil</param>
+        /// <returns></returns>
         public static async Task<string> DeSerializeBoligFileAsync(String fileName)
         {
             string fileString = null;
