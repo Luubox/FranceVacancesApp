@@ -13,6 +13,6 @@
 
         <Button Content="Search" HorizontalAlignment="Left" Margin="1070,0,0,0" VerticalAlignment="Center" BorderBrush="#FFE40909" Background="#66FFFFFF"/>
         <TextBox Height="25" Width="600" HorizontalAlignment="center" Margin="0,0,0,0" Text="TextBox" VerticalAlignment="center" SelectionHighlightColorWhenNotFocused="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" BorderBrush="#FFE40909"/>
-        <Image Source="../Assets/FranceVacancesBackground.png" RequestedTheme="Default"/>
+        <Image Source="../Assets/FranceVacancesBackground.png"></Image>
     </Grid>
 </Page>
