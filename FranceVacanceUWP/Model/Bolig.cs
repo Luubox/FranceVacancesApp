@@ -10,17 +10,15 @@
         public string Adresse { get; set; }
         public double Rating { get; set; }
         public bool Husdyr { get; set; }
-        public Udlejer Owner { get; set; }
+        //public Udlejer Owner { get; set; 
+        //TODO: Lav association til owner class?
 
         //TODO: Dictionary for featueres?
 
-        public Bolig()
-        {
-        }
-
+        public Bolig(){}
         public Bolig(int antalPersoner, int antalSoveværelser, string type,
             int antalBadeværelser, int kvadratmeter, string adresse,
-            double rating, bool husdyr, Udlejer owner)
+            double rating, bool husdyr)
         {
             AntalPersoner = antalPersoner;
             AntalSoveværelser = antalSoveværelser;
@@ -30,7 +28,6 @@
             Adresse = adresse;
             Rating = rating;
             Husdyr = husdyr;
-            Owner = owner;
         }
 
         public override string ToString()
@@ -38,7 +35,7 @@
             return string.Format(
                 $"Antal Personer: {AntalPersoner}, Antal Soveværelser: {AntalSoveværelser}, " +
                 $"Type: {Type}, Antal Badeværelser: {AntalBadeværelser}, Kvadratmeter {Kvadratmeter}, " +
-                $"Adresse: {Adresse}, Rating: {Rating}, Husdyr: {Husdyr}, Owner: {Owner}");
+                $"Adresse: {Adresse}, Rating: {Rating}, Husdyr: {Husdyr}");
         }
     }
 }

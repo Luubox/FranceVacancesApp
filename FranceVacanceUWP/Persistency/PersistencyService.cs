@@ -10,7 +10,7 @@ namespace FranceVacanceUWP.Persistency
     class PersistencyService
     {
         //TODO: locate/create storage folder
-
+        
         public static async void SaveBoligAsJsonAsync(ObservableCollection<Bolig> b)
         {
             string boliger = JsonConvert.SerializeObject(b);

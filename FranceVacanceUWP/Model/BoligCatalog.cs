@@ -16,28 +16,25 @@ namespace FranceVacanceUWP.Model
 
         private BoligCatalog()
         {
-            //todo: get items from file
             BoligListe = new ObservableCollection<Bolig>(LoadBoligFromJsonAsync().Result);
 
-            if (Bolig.Count == 0)
+            if (BoligListe.Count == 0)
             {
-                //Item item1 = new Item("978 - 1 - 4302 - 4233 - 8", "Pro C# 5.0 and the .NET 4.5 Framework", "Andrew Troelsen", 28);
-                //Item item2 = new Item("0 - 13 - 148906 - 2", "Applying UML and Patterns", "Craig Larman", 28);
-                //Items.Add(item1);
-                //Items.Add(item2);
+                Bolig defaultBolig1 = new Bolig(2, 1, "Lejlighed", 1, 40, "testvej 1, 1234 testcity", 5.0, false);
+                Bolig defaultBolig2 = new Bolig(4, 3, "Hytte", 2, 70, "testvej 2, 1234 testcity", 3.5, true);
+                BoligListe.Add(defaultBolig1);
+                BoligListe.Add(defaultBolig2);
 
-                //saves items to file
                 SaveBoligAsJsonAsync(BoligListe);
             }
         }
 
         public void Add(int antalPersoner, int antalSoveværelser, string type,
             int antalBadeværelser, int kvadratmeter, string adresse,
-            double rating, bool husdyr, Udlejer owner)
+            double rating, bool husdyr)
         {
             BoligListe.Add(new Bolig(antalPersoner, antalSoveværelser, type,
-                antalBadeværelser, kvadratmeter, adresse, rating, husdyr,
-                owner));
+                antalBadeværelser, kvadratmeter, adresse, rating, husdyr));
         }
     }
 }
