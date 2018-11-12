@@ -1,4 +1,4 @@
-﻿namespace FranceVacancesApp.Model
+﻿namespace FranceVacanceUWP.Model
 {
     internal class Bolig
     {

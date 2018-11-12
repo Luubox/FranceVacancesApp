@@ -1,7 +1,7 @@
 ﻿using System.Collections.ObjectModel;
-using FranceVacancesApp.Persistency;
+using FranceVacanceUWP.Persistency;
 
-namespace FranceVacancesApp.Model
+namespace FranceVacanceUWP.Model
 {
     class BoligCatalog : PersistencyService
     {

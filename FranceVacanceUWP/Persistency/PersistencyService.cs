@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
-using FranceVacancesApp.Model;
+using FranceVacanceUWP.Model;
 using Newtonsoft.Json;
 
 namespace FranceVacanceUWP.Persistency
