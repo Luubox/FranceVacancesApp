@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="FranceVacanceUWP.View.BoligPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FranceVacanceUWP.ViewModel"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModel="using:FranceVacanceUWP.ViewModel"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.DataContext>
+        <viewModel:BoligViewModel/>
+    </Page.DataContext>
+
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="{Binding TextBlockText, Mode=TwoWay}" Margin="30"/>
+            <Button Content="Test RelayCommand" Margin="30" />
+        </StackPanel>
+    </Grid>
+</Page>
