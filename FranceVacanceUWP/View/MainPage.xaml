@@ -7,15 +7,21 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewModel="using:FranceVacanceUWP.ViewModel"
     mc:Ignorable="d"
-    Background="White">
+    Background="SteelBlue">
 
     <Page.DataContext>
         <viewModel:BoligViewModel/>
     </Page.DataContext>
+<<<<<<< HEAD
+=======
+
+>>>>>>> a1bcf89508904238ad73dc2ec4ee53dd2412c78b
 
     <Grid>
-        <Image Source="../Assets/FranceVacancesLogo.png" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100"/>
+        <Image Source="../Assets/FranceVacancesLogo.png" HorizontalAlignment="Left" Height="180" Margin="10,-25,0,0" VerticalAlignment="Top" Width="175"/>
+        <TextBox Height="25" Width="600" HorizontalAlignment="center" Margin="0,0,0,0" Text="TextBox" VerticalAlignment="center" SelectionHighlightColorWhenNotFocused="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" BorderBrush="#FFE40909"/>
 
+<<<<<<< HEAD
         <Button Content="Search" Margin="1070,0,0,0"
                 HorizontalAlignment="Left" VerticalAlignment="Center" 
                 BorderBrush="#FFE40909" Background="#66FFFFFF"/>
@@ -23,5 +29,9 @@
         <Image Source="../Assets/FranceVacancesBackground.png"></Image>
 
         <Button Content="bolig" Click="ButtonBase_OnClick"/>
+=======
+        <Button Content="Search" HorizontalAlignment="Left" Margin="1070,0,0,0" VerticalAlignment="Center" BorderBrush="#FFE40909" Background="#66FFFFFF"/>
+        <Image Source="http://www.home-hunts.net/wp-content/uploads/2017/02/shutterstock_252154954-1280x640.jpg" />
+>>>>>>> a1bcf89508904238ad73dc2ec4ee53dd2412c78b
     </Grid>
 </Page>
