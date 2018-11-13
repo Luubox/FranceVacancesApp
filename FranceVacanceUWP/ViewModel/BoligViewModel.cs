@@ -12,9 +12,9 @@ namespace FranceVacanceUWP.ViewModel
 {
     class BoligViewModel : INotifyPropertyChanged
     {
-        //public BoligCatalog BoligCatalog { get; set; }
+        public BoligCatalog BoligCatalog { get; set; }
 
-        //TODO: binding halløjsa
+        //TODO: Commands, Binding, Test serialization, GUI, RelayCommand??
 
         public event PropertyChangedEventHandler PropertyChanged;
 

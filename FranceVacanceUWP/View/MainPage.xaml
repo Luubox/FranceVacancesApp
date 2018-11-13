@@ -5,8 +5,13 @@
     xmlns:local="using:FranceVacanceUWP"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModel="using:FranceVacanceUWP.ViewModel"
     mc:Ignorable="d"
     Background="SteelBlue">
+
+    <Page.DataContex>
+        <viewModel:BoligViewModel/>
+    </Page.DataContex>
 
     <Grid>
         <Image Source="../Assets/FranceVacancesLogo.png" HorizontalAlignment="Left" Height="180" Margin="10,-25,0,0" VerticalAlignment="Top" Width="175"/>

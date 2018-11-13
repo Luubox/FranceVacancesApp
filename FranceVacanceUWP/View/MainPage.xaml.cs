@@ -14,7 +14,7 @@ namespace FranceVacanceUWP.View
         {
             this.InitializeComponent();
             
-
+            
         }
     }
 }
